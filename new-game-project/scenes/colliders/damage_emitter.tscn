@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://byn12xwaofnmu"]
+
+[node name="DamageEmitter" type="Area2D" unique_id=438854232]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1510580161]
+debug_color = Color(0.9749147, 0, 0.42675927, 0.41960785)

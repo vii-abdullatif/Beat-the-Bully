@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Beat_the_Bully"
 run/main_scene="uid://coar0w52ewb50"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -32,7 +32,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 folder_colors={
 "res://assets/": "red",
-"res://scenes/": "yellow"
+"res://scenes/": "yellow",
+"res://scenes/Probs/": "yellow"
 }
 
 [input]
@@ -54,6 +55,9 @@ jump={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemy"
 2d_physics/layer_4="Destructibles"
+2d_physics/layer_5="PlayerDamageReciever"
+2d_physics/layer_6="EnemyDamageReciever"
+2d_physics/layer_7="DestructibleDamageReciever"
 
 [physics]
 
