@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d0nhl0c06ortq" path="res://world.gd" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://cdcykknrrf5c0" path="res://scenes/characters/player.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://ck6136gput2f5" path="res://scenes/Probs/barrel.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://c7jvl6u40eq0r" path="res://scenes/characters/basic_enemy.tscn" id="5_036b0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
 size = Vector2(6, 64)
@@ -36,10 +37,20 @@ shape = SubResource("RectangleShape2D_tlwt5")
 y_sort_enabled = true
 
 [node name="Player" parent="ActorsContainer" unique_id=933271110 instance=ExtResource("2_fj7yv")]
-position = Vector2(31, 46)
+position = Vector2(43, 44)
+collision_layer = 0
+collision_mask = 41
+
+[node name="DamageEmitter" parent="ActorsContainer/Player" index="4" unique_id=438854232]
+position = Vector2(4, -11)
 
 [node name="Barrel" parent="ActorsContainer" unique_id=1040210466 instance=ExtResource("4_aqk2v")]
 position = Vector2(71, 43)
 
+[node name="BasicEnemy" parent="ActorsContainer" unique_id=282556991 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
+position = Vector2(15, 59)
+player = NodePath("../Player")
+
 [editable path="ActorsContainer/Player"]
 [editable path="ActorsContainer/Player/DamageEmitter"]
+[editable path="ActorsContainer/Player/DamageReciever"]
