@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dqacl634dutve" path="res://scenes/characters/character.tscn" id="1_rp718"]
 [ext_resource type="Script" uid="uid://bws42unln1nfm" path="res://scenes/characters/player.gd" id="2_76oj4"]
 [ext_resource type="Texture2D" uid="uid://ch4pnws1b5203" path="res://assets/art/characters/player.png" id="2_yewv4"]
+[ext_resource type="PackedScene" uid="uid://dtwt42gk076cx" path="res://scenes/characters/enemy_slots.tscn" id="4_dyp2m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_76oj4"]
 radius = 2.0
@@ -256,10 +257,11 @@ size = Vector2(8, 8)
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("2_76oj4")
-damage = 4
+damage = 10
 jumb_intensity = 150.0
-max_health = 30
-speed = 45
+knockback_intensity = 50.0
+max_health = 40
+speed = 50
 
 [node name="CharacterSprite" parent="." index="1" unique_id=988075812]
 texture = ExtResource("2_yewv4")
@@ -282,7 +284,7 @@ collision_mask = 40
 monitoring = true
 
 [node name="CollisionShape2D" parent="DamageEmitter" index="0" unique_id=1510580161]
-position = Vector2(10, -1)
+position = Vector2(10, -2)
 shape = SubResource("RectangleShape2D_yewv4")
 
 [node name="DamageReciever" parent="." index="5" unique_id=595315153]
@@ -291,6 +293,20 @@ collision_layer = 16
 [node name="CollisionShape2D" parent="DamageReciever" index="0" unique_id=1873404697]
 position = Vector2(1, -18)
 shape = SubResource("RectangleShape2D_76oj4")
+
+[node name="EnemySlots" type="Node2D" parent="." index="6" unique_id=1198246014]
+
+[node name="EnemySlots" parent="EnemySlots" index="0" unique_id=162159647 instance=ExtResource("4_dyp2m")]
+position = Vector2(17, 3)
+
+[node name="EnemySlots2" parent="EnemySlots" index="1" unique_id=958862513 instance=ExtResource("4_dyp2m")]
+position = Vector2(-17, 3)
+
+[node name="EnemySlots3" parent="EnemySlots" index="2" unique_id=1145228151 instance=ExtResource("4_dyp2m")]
+position = Vector2(-17, -4)
+
+[node name="EnemySlots4" parent="EnemySlots" index="3" unique_id=1146914020 instance=ExtResource("4_dyp2m")]
+position = Vector2(17, -3)
 
 [editable path="DamageEmitter"]
 [editable path="DamageReciever"]

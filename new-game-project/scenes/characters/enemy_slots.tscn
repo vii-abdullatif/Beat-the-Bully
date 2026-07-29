@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtwt42gk076cx"]
+
+[ext_resource type="Script" uid="uid://c4qhr2sv1580a" path="res://scenes/characters/enemy_slots.gd" id="1_lfdkv"]
+
+[node name="EnemySlots" type="Node2D" unique_id=162159647]
+script = ExtResource("1_lfdkv")

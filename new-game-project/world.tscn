@@ -49,6 +49,34 @@ position = Vector2(71, 43)
 
 [node name="BasicEnemy" parent="ActorsContainer" unique_id=282556991 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
 position = Vector2(15, 59)
+damage = null
+knockback_intensity = null
+knockdown_intensity = null
+max_health = null
+player = NodePath("../Player")
+
+[node name="BasicEnemy2" parent="ActorsContainer" unique_id=1833526029 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
+position = Vector2(15, 59)
+damage = null
+knockback_intensity = null
+knockdown_intensity = null
+max_health = null
+player = NodePath("../Player")
+
+[node name="BasicEnemy3" parent="ActorsContainer" unique_id=1868068345 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
+position = Vector2(15, 59)
+damage = null
+knockback_intensity = null
+knockdown_intensity = null
+max_health = null
+player = NodePath("../Player")
+
+[node name="BasicEnemy4" parent="ActorsContainer" unique_id=1475029505 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
+position = Vector2(15, 59)
+damage = null
+knockback_intensity = null
+knockdown_intensity = null
+max_health = null
 player = NodePath("../Player")
 
 [editable path="ActorsContainer/Player"]
