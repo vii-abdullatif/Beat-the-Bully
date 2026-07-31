@@ -46,6 +46,7 @@ y_sort_enabled = true
 position = Vector2(43, 44)
 collision_layer = 0
 collision_mask = 41
+has_knife = true
 
 [node name="DamageEmitter" parent="ActorsContainer/Player" index="4" unique_id=438854232]
 position = Vector2(4, -11)
@@ -56,26 +57,9 @@ position = Vector2(71, 43)
 [node name="BasicEnemy" parent="ActorsContainer" unique_id=282556991 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
 position = Vector2(15, 59)
 player = NodePath("../Player")
-
-[node name="BasicEnemy2" parent="ActorsContainer" unique_id=1833526029 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
-position = Vector2(46, 64)
-player = NodePath("../Player")
-
-[node name="BasicEnemy5" parent="ActorsContainer" unique_id=1140843228 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
-position = Vector2(85, 52)
-player = NodePath("../Player")
-
-[node name="BasicEnemy3" parent="ActorsContainer" unique_id=1868068345 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
-position = Vector2(12, 40)
-player = NodePath("../Player")
-
-[node name="BasicEnemy4" parent="ActorsContainer" unique_id=1475029505 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
-position = Vector2(74, 58)
-player = NodePath("../Player")
-
-[node name="BasicEnemy6" parent="ActorsContainer" unique_id=129129504 node_paths=PackedStringArray("player") instance=ExtResource("5_036b0")]
-position = Vector2(134, 49)
-player = NodePath("../Player")
+can_respawn_knives = true
+damage_power = 10
+duration_between_knife_respawn = 2000
 
 [editable path="ActorsContainer/Player"]
 [editable path="ActorsContainer/Player/DamageEmitter"]
