@@ -15,6 +15,10 @@ run/main_scene="uid://coar0w52ewb50"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EntityManager="*uid://di4a1cemiyxvt"
+
 [debug]
 
 gdscript/warnings/unused_signal=0
@@ -37,7 +41,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 folder_colors={
 "res://assets/": "red",
 "res://scenes/": "yellow",
-"res://scenes/Probs/": "yellow"
+"res://scenes/Probs/": "yellow",
+"res://utils/": "pink"
 }
 
 [input]

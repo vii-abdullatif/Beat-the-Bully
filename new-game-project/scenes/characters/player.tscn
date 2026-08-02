@@ -27,22 +27,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("DamageEmitter:monitoring")
+tracks/1/path = NodePath("KnifeSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("KnifeSprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -229,22 +217,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("DamageEmitter:monitoring")
+tracks/1/path = NodePath("KnifeSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("KnifeSprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -284,22 +260,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("DamageEmitter:monitoring")
+tracks/2/path = NodePath("KnifeSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("KnifeSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
@@ -339,22 +303,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("DamageEmitter:monitoring")
+tracks/2/path = NodePath("KnifeSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("KnifeSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -437,22 +389,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("DamageEmitter:monitoring")
+tracks/2/path = NodePath("KnifeSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.05, 0.15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("KnifeSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
@@ -492,22 +432,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("DamageEmitter:monitoring")
+tracks/2/path = NodePath("KnifeSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("KnifeSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.05),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -547,22 +475,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("DamageEmitter:monitoring")
+tracks/2/path = NodePath("KnifeSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("KnifeSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
@@ -716,11 +632,13 @@ size = Vector2(3, 3)
 
 [node name="Player" unique_id=933271110 instance=ExtResource("1_rp718")]
 collision_layer = 2
-collision_mask = 137
+collision_mask = 393
 script = ExtResource("2_76oj4")
 can_respawn = true
 damage = 3
 damage_power = 6
+duration_grounded = 1000.0
+duration_between_knife_respawn = 100
 jumb_intensity = 150.0
 knockback_intensity = 10.0
 knockdown_intensity = 70.0
@@ -743,10 +661,8 @@ libraries/ = SubResource("AnimationLibrary_dyp2m")
 autoplay = &"idle"
 
 [node name="DamageEmitter" parent="." index="4" unique_id=438854232]
-visible = false
 position = Vector2(0, -12)
 collision_mask = 40
-monitoring = true
 
 [node name="CollisionShape2D" parent="DamageEmitter" index="0" unique_id=1510580161]
 visible = false
@@ -754,7 +670,6 @@ position = Vector2(10, -2)
 shape = SubResource("RectangleShape2D_yewv4")
 
 [node name="DamageReciever" parent="." index="5" unique_id=595315153]
-visible = false
 collision_layer = 16
 
 [node name="CollisionShape2D" parent="DamageReciever" index="0" unique_id=1873404697]
@@ -762,7 +677,6 @@ position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_76oj4")
 
 [node name="EnemySlots" type="Node2D" parent="." index="6" unique_id=1198246014]
-visible = false
 
 [node name="EnemySlots" parent="EnemySlots" index="0" unique_id=162159647 instance=ExtResource("4_dyp2m")]
 position = Vector2(17, 3)
@@ -776,9 +690,6 @@ position = Vector2(-17, -4)
 [node name="EnemySlots4" parent="EnemySlots" index="3" unique_id=1146914020 instance=ExtResource("4_dyp2m")]
 position = Vector2(17, -3)
 
-[node name="CollateralDamageEmitter" parent="." index="7" unique_id=875533364]
-visible = false
-
 [node name="KnifeSprite" parent="." index="8" unique_id=1786411944]
 texture = ExtResource("5_atpat")
 centered = false
@@ -786,6 +697,9 @@ offset = Vector2(-24, -48)
 hframes = 10
 vframes = 10
 frame = 80
+
+[node name="WeaponPosition" parent="KnifeSprite" index="0" unique_id=70803524]
+position = Vector2(18, -14)
 
 [node name="CollectibleSensor" parent="." index="10" unique_id=1304287610]
 collision_mask = 256
