@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://uhnjr51vf6mf" path="res://scenes/ui/healthbar.tscn" id="3_aac20"]
 [ext_resource type="PackedScene" uid="uid://duh7n43u5uaxn" path="res://scenes/ui/combo_indicator.tscn" id="5_0dwhk"]
 [ext_resource type="PackedScene" uid="uid://d2a1ixwjb0q0i" path="res://scenes/ui/score_indicator.tscn" id="6_pfayw"]
+[ext_resource type="PackedScene" uid="uid://up1cqdd5mcme" path="res://scenes/ui/flickering_texture_rect.tscn" id="7_jcn1r"]
+[ext_resource type="Texture2D" uid="uid://h830qww28vtu" path="res://assets/art/ui/go-go-go.png" id="8_uegxj"]
 
 [node name="UI" type="CanvasLayer" unique_id=932248756]
 script = ExtResource("1_g5kmx")
@@ -91,5 +93,20 @@ offset_left = 12.0
 offset_top = 1.0
 offset_right = 62.0
 offset_bottom = 16.0
+
+[node name="GoIndicator" parent="UIContainer" unique_id=1948244372 instance=ExtResource("7_jcn1r")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_top = 11.0
+offset_right = 0.0
+offset_bottom = 27.0
+grow_horizontal = 0
+texture = ExtResource("8_uegxj")
+stretch_mode = 2
+duration_flicker = 200
+total_flickers = 3
 
 [editable path="UIContainer/EnemyHealthbar"]

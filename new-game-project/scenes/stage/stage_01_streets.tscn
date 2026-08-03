@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cg7bsi76cj30k" path="res://scenes/props/door.tscn" id="8_ea7xw"]
 
 [node name="Stage-01-Streets" unique_id=286998905 instance=ExtResource("1_lluwt")]
+music = 2
 
 [node name="MainBackGround" parent="Backgrounds" parent_id_path=PackedInt32Array(163041291) index="0" unique_id=1540797724]
 texture = ExtResource("2_5wvst")

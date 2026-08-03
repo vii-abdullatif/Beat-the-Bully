@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://brw6mw0eabhkw" path="res://scenes/ui/ui.tscn" id="2_qfnet"]
 [ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player.tscn" id="4_e3hyu"]
+[ext_resource type="Script" uid="uid://b3b6jev4wpl7j" path="res://scenes/stage/camera.gd" id="4_qfnet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcqf"]
 size = Vector2(6, 64)
@@ -20,6 +21,8 @@ script = ExtResource("1_4mrxx")
 position = Vector2(50, 32)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+script = ExtResource("4_qfnet")
+duration_shake = 50
 
 [node name="InvisibleWalls" type="Node2D" parent="Camera" unique_id=1443017583]
 position = Vector2(-50, -32)
@@ -53,6 +56,3 @@ position = Vector2(36, 46)
 speed = 100.0
 has_knife = false
 has_gun = false
-
-[editable path="UI"]
-[editable path="UI/UIContainer/EnemyHealthbar"]
