@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://df3rikr3va82q"]
 
+[ext_resource type="Script" uid="uid://b6c66irr2umc1" path="res://scenes/stage/stage.gd" id="1_ecxui"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c3j2f"]
 size = Vector2(419, 20)
 
 [node name="Stage" type="Node2D" unique_id=286998905]
+script = ExtResource("1_ecxui")
 
 [node name="Backgrounds" type="Node2D" parent="." unique_id=163041291]
 
@@ -29,3 +32,7 @@ position = Vector2(199.5, 0)
 shape = SubResource("RectangleShape2D_c3j2f")
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=2113053004]
+
+[node name="Containers" type="Node2D" parent="." unique_id=1540484721]
+
+[node name="Doors" type="Node2D" parent="." unique_id=647232836]
