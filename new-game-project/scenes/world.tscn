@@ -4,10 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage.tscn" id="2_7r4gi"]
 [ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player.tscn" id="4_e3hyu"]
-[ext_resource type="PackedScene" uid="uid://qilhs2wt8rl8" path="res://scenes/props/barrel.tscn" id="5_q5onr"]
-[ext_resource type="PackedScene" uid="uid://ba7x8fhqs3fta" path="res://scenes/characters/basic_enemy.tscn" id="6_jhx03"]
-[ext_resource type="PackedScene" uid="uid://b4x51ckgk5rpv" path="res://scenes/characters/thug_enemy.tscn" id="8_4mrxx"]
-[ext_resource type="PackedScene" uid="uid://cnwqi0bw23cl3" path="res://scenes/characters/goon_enemy.tscn" id="8_xo05s"]
+[ext_resource type="PackedScene" uid="uid://cp0yo431ddo1b" path="res://scenes/characters/igor_boss.tscn" id="5_71j4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcqf"]
 size = Vector2(6, 64)
@@ -48,51 +45,10 @@ script = ExtResource("3_w7kh3")
 
 [node name="Player" parent="ActorsContainer" unique_id=1416681063 instance=ExtResource("4_e3hyu")]
 position = Vector2(36, 46)
-flight_speed = null
-speed = null
-can_respawn_knives = null
-duration_between_knife_respawn = null
-has_knife = null
-has_gun = null
+speed = 100.0
+has_knife = false
+has_gun = false
 
-[node name="Barrel" parent="ActorsContainer" unique_id=1824195553 instance=ExtResource("5_q5onr")]
-position = Vector2(61, 47)
-content_type = 2
-
-[node name="BasicEnemy" parent="ActorsContainer" unique_id=179279877 node_paths=PackedStringArray("player") instance=ExtResource("6_jhx03")]
-position = Vector2(76, 56)
+[node name="IgorBoss" parent="ActorsContainer" unique_id=1633670713 node_paths=PackedStringArray("player") instance=ExtResource("5_71j4m")]
+position = Vector2(77, 47)
 player = NodePath("../Player")
-can_respawn = null
-jump_intensity = null
-speed = null
-autodestroy_on_drop = null
-can_respawn_knives = null
-damage_power = null
-duration_between_knife_respawn = null
-has_knife = null
-has_gun = null
-max_ammo_per_gun = null
-
-[node name="GoonEnemy" parent="ActorsContainer" unique_id=1087732634 node_paths=PackedStringArray("player") instance=ExtResource("8_xo05s")]
-position = Vector2(127, 58)
-player = NodePath("../Player")
-can_respawn = null
-jump_intensity = null
-speed = null
-autodestroy_on_drop = null
-damage_power = null
-has_gun = null
-max_ammo_per_gun = null
-
-[node name="ThugEnemy" parent="ActorsContainer" unique_id=71080072 node_paths=PackedStringArray("player") instance=ExtResource("8_4mrxx")]
-position = Vector2(189, 55)
-player = NodePath("../Player")
-can_respawn = null
-jump_intensity = null
-speed = null
-autodestroy_on_drop = null
-can_respawn_knives = null
-damage_power = null
-duration_between_knife_respawn = null
-has_knife = null
-max_ammo_per_gun = null
