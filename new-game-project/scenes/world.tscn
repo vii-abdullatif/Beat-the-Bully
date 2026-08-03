@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://uqrqng3qanfq"]
 
-[ext_resource type="Script" uid="uid://c5n104jleri6f" path="res://scenes/world.gd" id="1_58n65"]
-[ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage.tscn" id="1_ea3cy"]
-[ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player.tscn" id="2_fso2d"]
-[ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_1ub62"]
-[ext_resource type="PackedScene" uid="uid://qilhs2wt8rl8" path="res://scenes/props/barrel.tscn" id="4_cs001"]
-[ext_resource type="PackedScene" uid="uid://ba7x8fhqs3fta" path="res://scenes/characters/basic_enemy.tscn" id="5_15mmh"]
-[ext_resource type="PackedScene" uid="uid://clqck6kawlwhi" path="res://scenes/props/knife.tscn" id="6_4co1t"]
-[ext_resource type="PackedScene" uid="uid://cnwqi0bw23cl3" path="res://scenes/characters/goon_enemy.tscn" id="7_xjatk"]
+[ext_resource type="Script" uid="uid://c5n104jleri6f" path="res://scenes/world.gd" id="1_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage.tscn" id="2_7r4gi"]
+[ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player.tscn" id="4_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://qilhs2wt8rl8" path="res://scenes/props/barrel.tscn" id="5_q5onr"]
+[ext_resource type="PackedScene" uid="uid://ba7x8fhqs3fta" path="res://scenes/characters/basic_enemy.tscn" id="6_jhx03"]
+[ext_resource type="PackedScene" uid="uid://b4x51ckgk5rpv" path="res://scenes/characters/thug_enemy.tscn" id="8_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://cnwqi0bw23cl3" path="res://scenes/characters/goon_enemy.tscn" id="8_xo05s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcqf"]
 size = Vector2(6, 64)
 
 [node name="World" type="Node2D" unique_id=1926758156]
-script = ExtResource("1_58n65")
+script = ExtResource("1_4mrxx")
 
-[node name="Stage" parent="." unique_id=444672733 instance=ExtResource("1_ea3cy")]
+[node name="Stage" parent="." unique_id=444672733 instance=ExtResource("2_7r4gi")]
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1825035095]
 position = Vector2(50, 32)
@@ -44,27 +44,55 @@ shape = SubResource("RectangleShape2D_ktcqf")
 
 [node name="ActorsContainer" type="Node2D" parent="." unique_id=1442286273]
 y_sort_enabled = true
-script = ExtResource("3_1ub62")
+script = ExtResource("3_w7kh3")
 
-[node name="Player" parent="ActorsContainer" unique_id=1416681063 instance=ExtResource("2_fso2d")]
+[node name="Player" parent="ActorsContainer" unique_id=1416681063 instance=ExtResource("4_e3hyu")]
 position = Vector2(36, 46)
+flight_speed = null
+speed = null
+can_respawn_knives = null
+duration_between_knife_respawn = null
+has_knife = null
+has_gun = null
 
-[node name="Barrel" parent="ActorsContainer" unique_id=1824195553 instance=ExtResource("4_cs001")]
+[node name="Barrel" parent="ActorsContainer" unique_id=1824195553 instance=ExtResource("5_q5onr")]
 position = Vector2(61, 47)
+content_type = 2
 
-[node name="BasicEnemy" parent="ActorsContainer" unique_id=237057327 node_paths=PackedStringArray("player") instance=ExtResource("5_15mmh")]
-position = Vector2(67, 58)
+[node name="BasicEnemy" parent="ActorsContainer" unique_id=179279877 node_paths=PackedStringArray("player") instance=ExtResource("6_jhx03")]
+position = Vector2(76, 56)
 player = NodePath("../Player")
-duration_between_knife_respawn = 2000
-has_gun = true
+can_respawn = null
+jump_intensity = null
+speed = null
+autodestroy_on_drop = null
+can_respawn_knives = null
+damage_power = null
+duration_between_knife_respawn = null
+has_knife = null
+has_gun = null
+max_ammo_per_gun = null
 
-[node name="Knife" parent="ActorsContainer" unique_id=339038681 instance=ExtResource("6_4co1t")]
-position = Vector2(21, 52)
-
-[node name="GoonEnemy" parent="ActorsContainer" unique_id=608731061 node_paths=PackedStringArray("player") instance=ExtResource("7_xjatk")]
-position = Vector2(83, 51)
+[node name="GoonEnemy" parent="ActorsContainer" unique_id=1087732634 node_paths=PackedStringArray("player") instance=ExtResource("8_xo05s")]
+position = Vector2(127, 58)
 player = NodePath("../Player")
-can_respawn_knives = false
-damage_gunshot = 0
-has_knife = false
-has_gun = true
+can_respawn = null
+jump_intensity = null
+speed = null
+autodestroy_on_drop = null
+damage_power = null
+has_gun = null
+max_ammo_per_gun = null
+
+[node name="ThugEnemy" parent="ActorsContainer" unique_id=71080072 node_paths=PackedStringArray("player") instance=ExtResource("8_4mrxx")]
+position = Vector2(189, 55)
+player = NodePath("../Player")
+can_respawn = null
+jump_intensity = null
+speed = null
+autodestroy_on_drop = null
+can_respawn_knives = null
+damage_power = null
+duration_between_knife_respawn = null
+has_knife = null
+max_ammo_per_gun = null
