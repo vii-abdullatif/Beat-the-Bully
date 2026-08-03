@@ -7,27 +7,23 @@
 size = Vector2(10, 10)
 
 [node name="GoonEnemy" unique_id=1087732634 instance=ExtResource("1_vv56i")]
-can_respawn_knives = true
 damage = 1
-duration_grounded = 700.0
-duration_between_knife_respawn = 1000
-flight_speed = 120.0
-has_knife = true
-knockdown_intensity = 80.0
 max_health = 18
+type = 2
+duration_grounded = 700.0
+flight_speed = 120.0
+knockdown_intensity = 80.0
 speed = 28.0
+can_respawn_knives = true
+duration_between_knife_respawn = 1000
+has_knife = true
 
 [node name="CharacterSprite" parent="." index="1" unique_id=148271320]
 texture = ExtResource("2_w4itl")
 
-[node name="DamageReceiver" parent="." index="7" unique_id=946738810]
-collision_layer = 32
-
-[node name="CollisionShape2D" parent="DamageReceiver" index="0"]
-position = Vector2(0, -18)
+[node name="CollisionShape2D" parent="DamageReceiver" parent_id_path=PackedInt32Array(946738810) index="0"]
 shape = SubResource("RectangleShape2D_jb8ra")
 
-[editable path="DamageReciever"]
 [editable path="DamageEmitter"]
 [editable path="DamageReceiver"]
 [editable path="CollateralDamageEmitter"]

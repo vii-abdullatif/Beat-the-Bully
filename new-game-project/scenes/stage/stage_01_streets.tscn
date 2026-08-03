@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cubogj3rxp7v2"]
+
+[ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage.tscn" id="1_lluwt"]
+[ext_resource type="Texture2D" uid="uid://bnyttxppbbpst" path="res://assets/art/backgrounds/street-background.png" id="2_5wvst"]
+[ext_resource type="PackedScene" uid="uid://ncoaxtn3wrmc" path="res://scenes/stage/checkpoint.tscn" id="3_j5gp6"]
+[ext_resource type="PackedScene" uid="uid://cnwqi0bw23cl3" path="res://scenes/characters/goon_enemy.tscn" id="4_mslao"]
+[ext_resource type="PackedScene" uid="uid://ba7x8fhqs3fta" path="res://scenes/characters/basic_enemy.tscn" id="5_2j5k0"]
+
+[node name="Stage-01-Streets" unique_id=286998905 instance=ExtResource("1_lluwt")]
+
+[node name="MainBackGround" parent="Backgrounds" parent_id_path=PackedInt32Array(163041291) index="0" unique_id=1540797724]
+texture = ExtResource("2_5wvst")
+
+[node name="Checkpoint" parent="Checkpoints" parent_id_path=PackedInt32Array(2113053004) index="0" unique_id=496711712 instance=ExtResource("3_j5gp6")]
+position = Vector2(142, 0)
+
+[node name="GoonEnemy2" parent="Checkpoints/Checkpoint/Enemies" parent_id_path=PackedInt32Array(496711712, 164870140) index="0" unique_id=1087732634 instance=ExtResource("4_mslao")]
+position = Vector2(-37, 58)
+
+[node name="GoonEnemy" parent="Checkpoints/Checkpoint/Enemies" parent_id_path=PackedInt32Array(496711712, 164870140) index="1" unique_id=1767432398 instance=ExtResource("4_mslao")]
+position = Vector2(-20, 44)
+
+[node name="BasicEnemy" parent="Checkpoints/Checkpoint/Enemies" parent_id_path=PackedInt32Array(496711712, 164870140) index="2" unique_id=179279877 instance=ExtResource("5_2j5k0")]
+position = Vector2(110, 57)
+
+[node name="BasicEnemy2" parent="Checkpoints/Checkpoint/Enemies" parent_id_path=PackedInt32Array(496711712, 164870140) index="3" unique_id=403846737 instance=ExtResource("5_2j5k0")]
+position = Vector2(127, 43)
+
+[editable path="Checkpoints/Checkpoint"]
