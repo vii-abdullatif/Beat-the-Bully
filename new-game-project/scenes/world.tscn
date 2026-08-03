@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5n104jleri6f" path="res://scenes/world.gd" id="1_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://cubogj3rxp7v2" path="res://scenes/stage/stage_01_streets.tscn" id="2_71j4m"]
+[ext_resource type="PackedScene" uid="uid://brw6mw0eabhkw" path="res://scenes/ui/ui.tscn" id="2_qfnet"]
 [ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player.tscn" id="4_e3hyu"]
 
@@ -10,6 +11,8 @@ size = Vector2(6, 64)
 
 [node name="World" type="Node2D" unique_id=1926758156]
 script = ExtResource("1_4mrxx")
+
+[node name="UI" parent="." unique_id=932248756 instance=ExtResource("2_qfnet")]
 
 [node name="Stage-01-Streets" parent="." unique_id=286998905 instance=ExtResource("2_71j4m")]
 
@@ -50,3 +53,5 @@ position = Vector2(36, 46)
 speed = 100.0
 has_knife = false
 has_gun = false
+
+[editable path="UI"]

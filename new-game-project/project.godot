@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 EntityManager="*uid://di4a1cemiyxvt"
 StageManager="*uid://beqummmemh82y"
+DamageManager="*uid://bkw0mdd0cr68f"
 
 [debug]
 
