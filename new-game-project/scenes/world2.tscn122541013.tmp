@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://uqrqng3qanfq"]
+
+[ext_resource type="Script" uid="uid://c5n104jleri6f" path="res://scenes/world2.gd" id="1_58n65"]
+[ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage2.tscn" id="1_ea3cy"]
+[ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player2.tscn" id="2_fso2d"]
+[ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container2.gd" id="3_1ub62"]
+[ext_resource type="PackedScene" uid="uid://qilhs2wt8rl8" path="res://scenes/props/barrel2.tscn" id="4_cs001"]
+[ext_resource type="PackedScene" uid="uid://ba7x8fhqs3fta" path="res://scenes/characters/basic_enemy2.tscn" id="5_15mmh"]
+[ext_resource type="PackedScene" uid="uid://clqck6kawlwhi" path="res://scenes/props/knife2.tscn" id="6_4co1t"]
+[ext_resource type="PackedScene" uid="uid://cnwqi0bw23cl3" path="res://scenes/characters/goon_enemy2.tscn" id="7_xjatk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcqf"]
+size = Vector2(6, 64)
+
+[node name="World" type="Node2D" unique_id=1926758156]
+script = ExtResource("1_58n65")
+
+[node name="Stage" parent="." unique_id=444672733 instance=ExtResource("1_ea3cy")]
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1825035095]
+position = Vector2(50, 32)
+
+[node name="InvisibleWalls" type="Node2D" parent="Camera" unique_id=1443017583]
+position = Vector2(-50, -32)
+
+[node name="LeftWall" type="AnimatableBody2D" parent="Camera/InvisibleWalls" unique_id=767278428]
+collision_layer = 128
+collision_mask = 0
+sync_to_physics = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera/InvisibleWalls/LeftWall" unique_id=2038169291]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_ktcqf")
+
+[node name="RightWall" type="AnimatableBody2D" parent="Camera/InvisibleWalls" unique_id=658292825]
+position = Vector2(100, 0)
+collision_layer = 128
+collision_mask = 0
+sync_to_physics = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera/InvisibleWalls/RightWall" unique_id=572355989]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_ktcqf")
+
+[node name="ActorsContainer" type="Node2D" parent="." unique_id=1442286273]
+y_sort_enabled = true
+script = ExtResource("3_1ub62")
+
+[node name="Player" parent="ActorsContainer" unique_id=1416681063 instance=ExtResource("2_fso2d")]
+position = Vector2(36, 46)
+
+[node name="Barrel" parent="ActorsContainer" unique_id=1824195553 instance=ExtResource("4_cs001")]
+position = Vector2(61, 47)
+
+[node name="BasicEnemy" parent="ActorsContainer" unique_id=237057327 node_paths=PackedStringArray("player") instance=ExtResource("5_15mmh")]
+position = Vector2(67, 58)
+player = NodePath("../Player")
+duration_between_knife_respawn = 2000
+has_gun = true
+
+[node name="Knife" parent="ActorsContainer" unique_id=339038681 instance=ExtResource("6_4co1t")]
+position = Vector2(21, 52)
+
+[node name="GoonEnemy" parent="ActorsContainer" unique_id=608731061 node_paths=PackedStringArray("player") instance=ExtResource("7_xjatk")]
+position = Vector2(83, 51)
+player = NodePath("../Player")
+can_respawn_knives = false
+damage_gunshot = 0
+has_knife = false
+has_gun = true

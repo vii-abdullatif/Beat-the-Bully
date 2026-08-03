@@ -7,7 +7,7 @@ const GRAVITY := 600.0
 @onready var collectible_sprite : Sprite2D = $CollectibleSprite
 @onready var damage_emitter : Area2D = $DamageEmitter
 
-@export var damage : int
+@export var damage: int
 @export var knockdown_intensity : float
 @export var speed : float
 @export var type : Type
@@ -22,8 +22,8 @@ var anim_map := {
 }
 var direction := Vector2.ZERO
 var height := 0.0
-var height_speed:= 0.0
-var state := State.FALL
+var height_speed := 0.0
+var state = State.FALL
 var velocity := Vector2.ZERO
 
 func _ready() -> void:
@@ -31,8 +31,9 @@ func _ready() -> void:
 	if state == State.FLY:
 		velocity = direction * speed
 	damage_emitter.area_entered.connect(on_emit_damage.bind())
-	damage_emitter.area_exited.connect(on_exit_screen.bind())
+	damage_emitter.body_exited.connect(on_exit_screen.bind())
 	damage_emitter.position = Vector2.UP * height
+	damage_emitter.monitoring = state == State.FLY
 
 func _process(delta: float) -> void:
 	handle_fall(delta)
@@ -44,7 +45,7 @@ func _process(delta: float) -> void:
 func handle_animations() -> void:
 	animation_player.play(anim_map[state])
 
-func handle_fall(delta: float) -> void:
+func handle_fall(delta) -> void:
 	if state == State.FALL:
 		height += height_speed * delta
 		if height < 0:
@@ -52,10 +53,10 @@ func handle_fall(delta: float) -> void:
 			state = State.GROUNDED
 		else:
 			height_speed -= GRAVITY * delta
-
-func on_emit_damage(reciever: DamageReciever) -> void:
-	reciever.damage_recieved.emit(damage, direction, DamageReciever.HitType.KNOCKDOWN)
+		
+func on_emit_damage(receiver: DamageReceiver) -> void:
+	receiver.damage_received.emit(damage, direction, DamageReceiver.HitType.KNOCKDOWN)
 	queue_free()
 
-func on_exit_screen(_area: Area2D) -> void:
+func on_exit_screen(_wall: AnimatableBody2D) -> void:
 	queue_free()

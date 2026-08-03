@@ -4,7 +4,7 @@ extends Node2D
 var occupant : BasicEnemy = null
 
 func is_free() -> bool:
-	return occupant == null 
+	return occupant == null
 
 func free_up() -> void:
 	occupant = null
