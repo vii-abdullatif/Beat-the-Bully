@@ -55,3 +55,4 @@ has_knife = false
 has_gun = false
 
 [editable path="UI"]
+[editable path="UI/UIContainer/EnemyHealthbar"]
