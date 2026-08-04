@@ -22,7 +22,8 @@ position = Vector2(50, 32)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 script = ExtResource("4_qfnet")
-duration_shake = 50
+duration_shake = 1000.0
+shake_intensity = 0.5
 
 [node name="InvisibleWalls" type="Node2D" parent="Camera" unique_id=1443017583]
 position = Vector2(-50, -32)
@@ -53,6 +54,6 @@ player = NodePath("Player")
 
 [node name="Player" parent="ActorsContainer" unique_id=1416681063 instance=ExtResource("4_e3hyu")]
 position = Vector2(36, 46)
-speed = 100.0
+speed = 50.0
 has_knife = false
 has_gun = false

@@ -36,3 +36,5 @@ shape = SubResource("RectangleShape2D_c3j2f")
 [node name="Containers" type="Node2D" parent="." unique_id=1540484721]
 
 [node name="Doors" type="Node2D" parent="." unique_id=647232836]
+
+[node name="Fixtures" type="Node2D" parent="." unique_id=48373529]
