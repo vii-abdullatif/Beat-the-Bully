@@ -7,11 +7,12 @@ const STAGE_PREFABS := [
 ]
 
 @onready var actors_container : Node2D = $ActorsContainer
-@onready var player : CharacterBody2D 
 @onready var camera := $Camera
 @onready var stage_container : Node2D = $StageContainer
 @onready var stage_transition : StageTransition = $UI/UIContainer/StageTransition
+@onready var victory_screen : Control = $UI/Victory
 
+var player : CharacterBody2D 
 var camera_initial_position := Vector2.ZERO
 var current_stage_index := -1
 var is_camera_locked := false
@@ -19,9 +20,9 @@ var is_stage_ready_for_loading := false
 
 func _ready() -> void:
 	camera_initial_position = camera.position
-	StageManager.checkpoint_start.connect(on_checkpoint_start.bind())
-	StageManager.checkpoint_complete.connect(on_checkpoint_complete.bind())
-	StageManager.stage_interim.connect(load_next_stage.bind())
+	StageManager.checkpoint_start.connect(on_checkpoint_start)
+	StageManager.checkpoint_complete.connect(on_checkpoint_complete)
+	StageManager.stage_interim.connect(load_next_stage)
 	load_next_stage()
 
 func _process(_delta: float) -> void:
@@ -36,8 +37,8 @@ func _process(_delta: float) -> void:
 		camera.position = camera_initial_position
 		camera.reset_smoothing()
 		stage_transition.end_transition()
-	if not is_camera_locked and player.position.x > camera.position.x:
-		camera.position.x = player.position.x
+		if not is_camera_locked and is_instance_valid(player) and player.position.x > camera.position.x:
+			camera.position.x = player.position.x
 
 func load_next_stage() -> void:
 	current_stage_index += 1
@@ -47,9 +48,12 @@ func load_next_stage() -> void:
 		for existing_stage in stage_container.get_children():
 			existing_stage.queue_free()
 		is_stage_ready_for_loading = true
-		
+	else:
+		stage_transition.end_transition()
+		victory_screen.show_victory()
+
 func on_checkpoint_start() -> void:
 	is_camera_locked = true
 
-func on_checkpoint_complete(_chechpoint: Checkpoint) -> void:
+func on_checkpoint_complete(_checkpoint: Checkpoint) -> void:
 	is_camera_locked = false

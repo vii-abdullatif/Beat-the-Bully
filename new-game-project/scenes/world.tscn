@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5n104jleri6f" path="res://scenes/world.gd" id="1_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://brw6mw0eabhkw" path="res://scenes/ui/ui.tscn" id="2_qfnet"]
+[ext_resource type="PackedScene" uid="uid://kd481csa2aqm" path="res://scenes/ui/victory.tscn" id="3_71j4m"]
 [ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_w7kh3"]
 [ext_resource type="Script" uid="uid://b3b6jev4wpl7j" path="res://scenes/stage/camera.gd" id="4_qfnet"]
 
@@ -12,6 +13,8 @@ size = Vector2(6, 64)
 script = ExtResource("1_4mrxx")
 
 [node name="UI" parent="." unique_id=932248756 instance=ExtResource("2_qfnet")]
+
+[node name="Victory" parent="UI" unique_id=1551912830 instance=ExtResource("3_71j4m")]
 
 [node name="StageContainer" type="Node2D" parent="." unique_id=592246024]
 

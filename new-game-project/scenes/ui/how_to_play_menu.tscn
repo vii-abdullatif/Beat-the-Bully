@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://vfs5aeclcal5"]
+
+[ext_resource type="Script" uid="uid://v8ndnxa3cqii" path="res://scenes/ui/how_to_play_menu.gd" id="1_cbx3p"]
+[ext_resource type="Theme" uid="uid://4opvyghnwdto" path="res://gui_theme.tres" id="1_mwdsl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbx3p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf1fr"]
+bg_color = Color(0.60933006, 0.6093302, 0.60932994, 1)
+
+[node name="HowToPlay" type="Control" unique_id=123947284]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbx3p")
+
+[node name="TextureRect" type="ColorRect" parent="." unique_id=1883567238]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1814656719]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="TextureRect/VBoxContainer" unique_id=2049189848]
+layout_mode = 2
+theme_override_constants/margin_top = 2
+
+[node name="TitleLabel" type="Label" parent="TextureRect/VBoxContainer/TitleMargin" unique_id=262011173]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(1, 0.8156863, 0, 1)
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect/VBoxContainer" unique_id=783318988]
+custom_minimum_size = Vector2(10, 33)
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=702797638]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = " MOVING"
+
+[node name="Label2" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=2063446146]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "ARROWS-KEYS"
+
+[node name="Label3" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=100682294]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = " HIT"
+
+[node name="Label4" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=1713817698]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "C-KEY"
+
+[node name="Label5" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=1745928556]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = " JUMP"
+
+[node name="Label6" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=1203156382]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "X-KEY"
+
+[node name="Label7" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=573784979]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = " MENU"
+
+[node name="Label8" type="Label" parent="TextureRect/VBoxContainer/GridContainer" unique_id=374892829]
+layout_mode = 2
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "ESCAPE-KEY"
+
+[node name="ReturnButton" type="Button" parent="TextureRect/VBoxContainer" unique_id=1987318211]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("1_mwdsl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbx3p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jf1fr")
+text = "RETURN"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
