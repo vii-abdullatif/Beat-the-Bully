@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://wsg2lp8wnk40"]
+
+[ext_resource type="PackedScene" uid="uid://bfsqxtn02b5a0" path="res://scenes/ui/controls/activable_control.tscn" id="1_22n7l"]
+[ext_resource type="Script" uid="uid://crnw5whld305b" path="res://scenes/ui/controls/range_picker.gd" id="2_2wkcw"]
+[ext_resource type="Texture2D" uid="uid://87tlx241nqco" path="res://assets/art/ui/ui-tick-on.png" id="2_oljjj"]
+
+[node name="RangePicker" unique_id=1076081580 instance=ExtResource("1_22n7l")]
+script = ExtResource("2_2wkcw")
+current_value = 5
+max_value = 10
+
+[node name="TicksContainer" type="HBoxContainer" parent="." index="1" unique_id=728077445]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="TicksContainer" index="0" unique_id=1835390170]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect2" type="TextureRect" parent="TicksContainer" index="1" unique_id=1415715196]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect3" type="TextureRect" parent="TicksContainer" index="2" unique_id=900413975]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect4" type="TextureRect" parent="TicksContainer" index="3" unique_id=1409644223]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect5" type="TextureRect" parent="TicksContainer" index="4" unique_id=731746198]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect6" type="TextureRect" parent="TicksContainer" index="5" unique_id=1992967777]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect7" type="TextureRect" parent="TicksContainer" index="6" unique_id=1806138108]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect8" type="TextureRect" parent="TicksContainer" index="7" unique_id=171928453]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect9" type="TextureRect" parent="TicksContainer" index="8" unique_id=1611025470]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
+
+[node name="TextureRect10" type="TextureRect" parent="TicksContainer" index="9" unique_id=2080118000]
+layout_mode = 2
+texture = ExtResource("2_oljjj")
