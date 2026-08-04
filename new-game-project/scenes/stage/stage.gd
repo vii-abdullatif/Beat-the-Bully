@@ -4,8 +4,12 @@ extends Node2D
 @onready var checkpoints : Node2D = $Checkpoints
 @onready var containers : Node2D = $Containers
 @onready var doors : Node2D = $Doors
+@onready var player_spawn_location : Node2D = $PlayerSpawnLocation
 
 @export var music : MusicManager.Music 
+
+func _init() -> void:
+	StageManager.checkpoint_complete.connect(on_checkpoint_complete.bind())
 
 func _ready() -> void:
 	for container : Node2D in containers.get_children():
@@ -19,3 +23,11 @@ func _ready() -> void:
 	for checkpoint : Checkpoint in checkpoints.get_children():
 		checkpoint.create_enemy_data()
 	MusicPlayer.play(music)
+
+func get_player_spawn_location() -> Vector2:
+	return player_spawn_location.position
+
+func on_checkpoint_complete(checkpoint: Checkpoint) -> void:
+	if checkpoints.get_child(-1) == checkpoint: 
+		StageManager.stage_complete.emit()
+		

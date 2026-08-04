@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://uqrqng3qanfq"]
 
 [ext_resource type="Script" uid="uid://c5n104jleri6f" path="res://scenes/world.gd" id="1_4mrxx"]
-[ext_resource type="PackedScene" uid="uid://cubogj3rxp7v2" path="res://scenes/stage/stage_01_streets.tscn" id="2_71j4m"]
 [ext_resource type="PackedScene" uid="uid://brw6mw0eabhkw" path="res://scenes/ui/ui.tscn" id="2_qfnet"]
 [ext_resource type="Script" uid="uid://brxvdfwrsyhc8" path="res://scenes/stage/actors_container.gd" id="3_w7kh3"]
-[ext_resource type="PackedScene" uid="uid://cvr6opvp31hp6" path="res://scenes/characters/player.tscn" id="4_e3hyu"]
 [ext_resource type="Script" uid="uid://b3b6jev4wpl7j" path="res://scenes/stage/camera.gd" id="4_qfnet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcqf"]
@@ -15,7 +13,7 @@ script = ExtResource("1_4mrxx")
 
 [node name="UI" parent="." unique_id=932248756 instance=ExtResource("2_qfnet")]
 
-[node name="Stage-01-Streets" parent="." unique_id=286998905 instance=ExtResource("2_71j4m")]
+[node name="StageContainer" type="Node2D" parent="." unique_id=592246024]
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1825035095]
 position = Vector2(50, 32)
@@ -47,13 +45,6 @@ sync_to_physics = false
 position = Vector2(0, 32)
 shape = SubResource("RectangleShape2D_ktcqf")
 
-[node name="ActorsContainer" type="Node2D" parent="." unique_id=1442286273 node_paths=PackedStringArray("player")]
+[node name="ActorsContainer" type="Node2D" parent="." unique_id=1442286273]
 y_sort_enabled = true
 script = ExtResource("3_w7kh3")
-player = NodePath("Player")
-
-[node name="Player" parent="ActorsContainer" unique_id=1416681063 instance=ExtResource("4_e3hyu")]
-position = Vector2(36, 46)
-speed = 50.0
-has_knife = false
-has_gun = false
