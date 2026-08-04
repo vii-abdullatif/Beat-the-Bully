@@ -190,7 +190,7 @@ texture = ExtResource("12_rdlvb")
 centered = false
 
 [node name="PlayerSpawnLocation" parent="." index="6" unique_id=238437546]
-position = Vector2(340, 49)
+position = Vector2(20, 40)
 
 [editable path="Checkpoints/Checkpoint"]
 [editable path="Checkpoints/Checkpoint2"]

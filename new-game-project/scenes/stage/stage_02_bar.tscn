@@ -582,7 +582,7 @@ position = Vector2(423, 40)
 content_type = 2
 
 [node name="PlayerSpawnLocation" parent="." index="6" unique_id=238437546]
-position = Vector2(515, 41)
+position = Vector2(20, 40)
 
 [editable path="Checkpoints/Checkpoint"]
 [editable path="Checkpoints/Checkpoint2"]

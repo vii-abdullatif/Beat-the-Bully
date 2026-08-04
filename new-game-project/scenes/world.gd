@@ -26,6 +26,7 @@ func _ready() -> void:
 	load_next_stage()
 
 func _process(_delta: float) -> void:
+	# Stage instantiation block
 	if is_stage_ready_for_loading:
 		is_stage_ready_for_loading = false
 		var stage : Stage = STAGE_PREFABS[current_stage_index].instantiate()
@@ -37,8 +38,8 @@ func _process(_delta: float) -> void:
 		camera.position = camera_initial_position
 		camera.reset_smoothing()
 		stage_transition.end_transition()
-		if not is_camera_locked and is_instance_valid(player) and player.position.x > camera.position.x:
-			camera.position.x = player.position.x
+	if not is_camera_locked and is_instance_valid(player) and player.position.x > camera.position.x:
+		camera.position.x = player.position.x
 
 func load_next_stage() -> void:
 	current_stage_index += 1
